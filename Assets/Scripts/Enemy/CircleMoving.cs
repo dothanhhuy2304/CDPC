@@ -16,13 +16,9 @@ namespace CDPC.Enemy
         public float timeDelay = 1.5f, startTime = 1.5f;
         private HealthController healthController;
 
-        private void Awake()
-        {
-            healthController = HealthController.instance;
-        }
-
         private void Start()
         {
+            healthController = HealthController.instance;
             dust = gameObject.GetComponentInChildren<ParticleSystem>();
             waitTime = startWaitTime;
             ramdomSpot = Random.Range(0, moveSpots.Length);
