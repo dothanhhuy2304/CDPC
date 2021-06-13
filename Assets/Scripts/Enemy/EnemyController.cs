@@ -76,6 +76,7 @@ namespace CDPC.Enemy
         {
             isMoving = false;
             rb.bodyType = RigidbodyType2D.Dynamic;
+            Destroy(gameObject, 5f);
         }
 
         private void Update()

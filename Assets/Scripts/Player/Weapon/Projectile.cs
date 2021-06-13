@@ -36,6 +36,11 @@ namespace CDPC.Player
                 {
                     DestroyProjectile();
                 }
+                else if (hit.collider.CompareTag("Boss"))
+                {
+                    hit.collider.GetComponent<BossController>().TakeDamage(Random.Range(30, 60));
+                    DestroyProjectile();
+                }
             }
             transform.Translate(Vector2.up * speed * Time.deltaTime);
         }

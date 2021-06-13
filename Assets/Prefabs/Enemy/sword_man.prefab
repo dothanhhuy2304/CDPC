@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4948829671860996}
   - component: {fileID: 212321163342673234}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Weapon-Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,6 +42,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -92,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4096975540831286}
   - component: {fileID: 212699115550802086}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,6 +126,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -178,9 +180,9 @@ GameObject:
   - component: {fileID: 1662904184}
   - component: {fileID: 1662904185}
   - component: {fileID: 1662904183}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: sword_man
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,6 +275,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   pointAttack: {fileID: 1033196446740940}
+  isRange: 0
+  spawn: {x: 0, y: 0}
+  prefab: {fileID: 0}
+  health: 0
+  maxHealth: 800
+  floatingTextPrefab: {fileID: 4318867596133368714, guid: 2d5c7a2b45bb9804fa09806172946d2e,
+    type: 3}
 --- !u!1 &1315759352830414
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,9 +292,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4954531293351526}
   - component: {fileID: 212874855828977060}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: body
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -317,6 +326,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -367,9 +377,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4507978557276566}
   - component: {fileID: 212825760485200248}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Leg
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -399,6 +409,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -448,7 +459,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4399083178108848}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4236636489436240}
   - component: {fileID: 212074183272344212}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Hat-Helmet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -512,6 +523,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -562,9 +574,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4364909317503996}
   - component: {fileID: 212798183564874916}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Leg2
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -594,6 +606,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

@@ -20,6 +20,12 @@ namespace CDPC.Enemy
         public GameObject prefab;
         private HealthController healthController;
         private SoundManger soundManger;
+        [Header("HealthSystem")]
+        public int health;
+        public int maxHealth = 800;
+        private float timeHear = 10f, startTime = 10f;
+        public GameObject floatingTextPrefab;
+        bool isDeath = false;
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
@@ -27,30 +33,80 @@ namespace CDPC.Enemy
             player = FindObjectOfType<PlayerController>().transform;
             healthController = HealthController.instance;
             soundManger = SoundManger.Instance;
+            health = maxHealth;
+            isDeath = false;
+        }
+
+        public void Hear(int value)
+        {
+            health += value;
+            ShowDamage(value.ToString());
+            if (health > maxHealth)
+            {
+                health = maxHealth;
+            }
+        }
+
+        public void TakeDamage(int damage)
+        {
+            health -= damage;
+            ShowDamage(damage.ToString());
+            if (health <= 0)
+            {
+                Dead();
+            }
+        }
+
+        public void Dead()
+        {
+            isDeath = true;
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            Destroy(gameObject, 5f);
+        }
+
+        public void ShowDamage(string text)
+        {
+            Vector3 offset = new Vector3(-0.2f, 1, 0);
+            GameObject textPrefab = Instantiate(floatingTextPrefab, transform.position + offset, Quaternion.identity);
+            textPrefab.GetComponentInChildren<TextMesh>().text = text;
+            textPrefab.name = "Damage";
+        }
+
+        private void Update()
+        {
+            timeHear -= Time.deltaTime;
+            if (timeHear <= 0)
+            {
+                Hear(50);
+                timeHear = startTime;
+            }
         }
 
         private void FixedUpdate()
         {
-            if (!healthController.isDeath)
+            if (!isDeath)
             {
-                if (isRange)
+                if (!healthController.isDeath)
                 {
-                    Moving();
+                    if (isRange)
+                    {
+                        Moving();
+                    }
+                    if (!isRange)
+                    {
+                        animator.Play("Idle");
+                    }
                 }
-                if (!isRange)
+                else
                 {
-                    animator.Play("Idle");
+                    transform.position = transform.position;
+                    isRange = false;
                 }
-            }
-            else
-            {
-                transform.position = transform.position;
-                isRange = false;
-            }
-            timeAttack -= Time.deltaTime;
-            if (timeAttack <= 0)
-            {
-                timeAttack = 0;
+                timeAttack -= Time.deltaTime;
+                if (timeAttack <= 0)
+                {
+                    timeAttack = 0;
+                }
             }
         }
 

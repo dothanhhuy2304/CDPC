@@ -13,6 +13,7 @@ TagManager:
   - Enemy
   - View
   - potion
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - coins
   - spikes
   - View
-  - 
+  - Enemys/Boss
   - 
   - 
   - 
