@@ -97,7 +97,6 @@ namespace CDPC.GameManagers
                 gameUI.SetActive(false);
             }
         }
-
         public void LoadCharacter()
         {
             int index = PlayerPrefs.GetInt("character");

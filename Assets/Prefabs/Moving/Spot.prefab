@@ -193,6 +193,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7625507376643001675}
     m_Modifications:
+    - target: {fileID: 322834660332199123, guid: 7744a0878c8febf43a36ed54265126af,
+        type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 322834660332199123, guid: 7744a0878c8febf43a36ed54265126af,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 322834660332199123, guid: 7744a0878c8febf43a36ed54265126af,
+        type: 3}
+      propertyPath: CollisionModule.collisionMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 322834660332199123, guid: 7744a0878c8febf43a36ed54265126af,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 322834660332199123, guid: 7744a0878c8febf43a36ed54265126af,
+        type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 322834660332199124, guid: 7744a0878c8febf43a36ed54265126af,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 322834660365950234, guid: 7744a0878c8febf43a36ed54265126af,
         type: 3}
       propertyPath: moveSpots.Array.data[0]
